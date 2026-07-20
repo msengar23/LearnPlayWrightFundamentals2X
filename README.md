@@ -109,7 +109,10 @@ LearnPlayWrightFundamentals2X/
 │   ├── Tasks_LiveClass_PlayWright2X/  # Live class task files
 │   │   ├── Task_01_10July_Xpath.spec.ts
 │   │   ├── 17July_Task01_Project_StudentLogin_Automate.spec.ts
-│   │   └── 17July_Task02_Project_OrangeHRM_Login_Finddata_Table.spec.ts
+│   │   ├── 17July_Task02_Project_OrangeHRM_Login_Finddata_Table.spec.ts
+│   │   ├── 19July_Task01_StaticTable.spec.ts
+│   │   ├── 19July_Task02_DynamicTable.spec.ts
+│   │   └── 20July_Task_01_SpiceJet_DropDown_ByType.spec.ts
 │   ├── example.spec.ts             # Sample Playwright tests
 │   └── Template.spec.ts            # Test template
 ├── playwright.config.ts            # Playwright configuration
