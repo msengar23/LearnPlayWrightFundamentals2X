@@ -6,3 +6,19 @@ node_modules/
 /blob-report/
 /playwright/.cache/
 /playwright/.auth/
+
+# TTA Custom Report
+/tta-report/
+
+# Allure Report
+/allure-results/
+
+# Session / User data
+user-session.json
+
+# Environment files
+.env
+!.env.example
+
+# Command Code
+.commandcode/
