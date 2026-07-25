@@ -11,9 +11,9 @@ const URL = 'https://www.flipkart.com/search'
 //         if (await next.isDisabled()) throw new Error(`Row not found: ${name}`);
 //         await next.click();
 //     }
-// }1
+// }
 
-test.describe('Flipkart Seach via the SVG', () => {
+test.describe('Flipkart Search via the SVG', () => {
 
     test.beforeEach(async ({ page }) => {
         console.log("Before running any Testcase!")

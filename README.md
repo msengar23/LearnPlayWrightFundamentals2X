@@ -15,12 +15,17 @@ This repository contains a Playwright test automation project built to demonstra
    cd LearnPlayWrightFundamentals2X
    ```
 
-2. Install dependencies:
+2. (If re-cloning) Restore the `.env` file from `.env.example` for VWO credentials:
+   ```bash
+   cp Utils/.env.example .env
+   ```
+
+3. Install dependencies:
    ```bash
    npm install
    ```
 
-3. Install Playwright browsers:
+4. Install Playwright browsers:
    ```bash
    npx playwright install
    ```
@@ -61,17 +66,17 @@ LearnPlayWrightFundamentals2X/
 │   ├── CustomReporter.ts         # Custom TTA HTML reporter (The Testing Academy)
 │   └── tsconfig.json             # TypeScript configuration (template)
 ├── tests/
-│   ├── 01_Basics/                  # Basic Playwright tests & annotations
+│   ├── 01_Basics/                    # Basic Playwright tests & annotations
 │   │   ├── 229_Basic_Test.spec.ts
 │   │   └── 230_Test_Annotations.spec.ts
-│   ├── 02_first_tests/             # Browser context, pages, & test options
+│   ├── 02_first_tests/               # Browser context, pages, & test options
 │   │   ├── 231_First_Running_Verify.spec.ts
 │   │   ├── 232_BCP.spec.ts
 │   │   ├── 233_BCP_MultipleContext.spec.ts
 │   │   ├── 234_BCP_MultiplePages.spec.ts
 │   │   ├── 236_BCP_TEST_PW.spec.ts
 │   │   └── 237_BCP_Test_Options.spec.ts
-│   ├── 03_Locators_Commands/       # Locators, commands, & VWO projects
+│   ├── 03_Locators_Commands/         # Locators, commands, & VWO projects
 │   │   ├── 238_LS.spec.ts
 │   │   ├── 239_Project_VWO_Login.spec.ts
 │   │   ├── 241_Project_3_Singup_VWO.spec.ts
@@ -81,32 +86,32 @@ LearnPlayWrightFundamentals2X/
 │   │   ├── 245_GetByRole_PW.spec.ts
 │   │   ├── 246_PressSeq.spec.ts
 │   │   └── XPath_TTA.pdf
-│   ├── 04_Session_Storage/         # Session & local storage handling
+│   ├── 04_Session_Storage/           # Session & local storage handling
 │   │   ├── 247_SessionStorage.spec.ts
 │   │   ├── 248_Session_Storage.spec.ts
 │   │   └── 249_TestVWODashboard_NoCustomReport.spec.ts
-│   ├── 05_Allure_Reporting/        # Allure reporting integration
+│   ├── 05_Allure_Reporting/          # Allure reporting integration
 │   │   └── 248_TestVWODashboard.spec.ts
-│   ├── 06_Multiple_Element_/       # (reserved)
-│   ├── 07_WebTables/               # (reserved)
-│   ├── 08_Web_Select_Frames_Iframe/ # (reserved)
-│   ├── 09_Frame_Iframe/            # (reserved)
-│   ├── 10_Keyboard_Hover_Drag_Drop/ # (reserved)
-│   ├── 11_JS_Alerts/               # (reserved)
-│   ├── 12_Handle_SVG/              # (reserved)
-│   ├── 13_Shadow_DOM/              # (reserved)
-│   ├── 14_FileUpload/              # (reserved)
-│   ├── 15_File_Download/           # (reserved)
-│   ├── 16_Scroll_toElement/        # (reserved)
-│   ├── 17_Expect_Assertions/       # (reserved)
-│   ├── 18_Test_hooks/              # (reserved)
-│   ├── 19_Data_Driven_Testing/     # (reserved)
-│   ├── 20_Page_Object_Model/       # (reserved)
-│   ├── 21_Fixture/                 # (reserved)
-│   ├── 22_Misc_Concepts/           # (reserved)
-│   ├── 23_Advance_Framework/       # (reserved)
-│   ├── Projects/                   # Capstone / project tests (reserved)
-│   ├── Tasks_LiveClass_PlayWright2X/  # Live class task files
+│   ├── 06_Multiple_Element_/         # (reserved)
+│   ├── 07_WebTables/                 # (reserved)
+│   ├── 08_Web_Select_Frames_Iframe/  # (reserved)
+│   ├── 09_Frame_Iframe/              # (reserved)
+│   ├── 10_Keyboard_Hover_Drag_Drop/  # (reserved)
+│   ├── 11_JS_Alerts/                 # (reserved)
+│   ├── 12_Handle_SVG/                # (reserved)
+│   ├── 13_Shadow_DOM/                # (reserved)
+│   ├── 14_FileUpload/                # (reserved)
+│   ├── 15_File_Download/             # (reserved)
+│   ├── 16_Scroll_toElement/          # (reserved)
+│   ├── 17_Expect_Assertions/         # (reserved)
+│   ├── 18_Test_hooks/                # (reserved)
+│   ├── 19_Data_Driven_Testing/       # (reserved)
+│   ├── 20_Page_Object_Model/         # (reserved)
+│   ├── 21_Fixture/                   # (reserved)
+│   ├── 22_Misc_Concepts/             # (reserved)
+│   ├── 23_Advance_Framework/         # (reserved)
+│   ├── Projects/                     # Capstone / project tests (reserved)
+│   ├── Tasks_LiveClass_PlayWright2X/ # Live class task files
 │   │   ├── Task_01_10July_Xpath.spec.ts
 │   │   ├── 17July_Task01_Project_StudentLogin_Automate.spec.ts
 │   │   ├── 17July_Task02_Project_OrangeHRM_Login_Finddata_Table.spec.ts
@@ -114,7 +119,7 @@ LearnPlayWrightFundamentals2X/
 │   │   ├── 19July_Task02_DynamicTable.spec.ts
 │   │   ├── 20July_Task_01_SpiceJet_DropDown_ByType.spec.ts
 │   │   ├── 22_July_Task_Hover_Menu_SelectSubMenu.spec.ts
-│   │   └── 24July_Task_FlipKart_Search_Macmini_LOwestPrice.spec.ts
+│   │   └── 24July_Task_FlipKart_Search_Macmini_LowestPrice.spec.ts
 │   ├── example.spec.ts             # Sample Playwright tests
 │   └── Template.spec.ts            # Test template
 ├── playwright.config.ts            # Playwright configuration
