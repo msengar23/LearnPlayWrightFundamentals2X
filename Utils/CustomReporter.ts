@@ -7,6 +7,8 @@
  * @description Custom HTML Reporter for Playwright Test Automation Framework
  */
 
+/// <reference types="node" />
+
 import {
     FullConfig,
     FullResult,
@@ -662,7 +664,8 @@ class CustomTTAReporter implements Reporter {
 
     private generateHTML(): string {
         const browserName = this.config.projects[0]?.name || 'chrome';
-        const platform = process.platform === 'darwin' ? 'Mac' : process.platform === 'win32' ? 'Windows' : 'Linux';
+        const platform = 
+        process.platform === 'darwin' ? 'Mac' : process.platform === 'win32' ? 'Windows' : 'Linux';
 
         return `<!DOCTYPE html>
 <html lang="en">

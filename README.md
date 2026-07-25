@@ -112,7 +112,9 @@ LearnPlayWrightFundamentals2X/
 │   │   ├── 17July_Task02_Project_OrangeHRM_Login_Finddata_Table.spec.ts
 │   │   ├── 19July_Task01_StaticTable.spec.ts
 │   │   ├── 19July_Task02_DynamicTable.spec.ts
-│   │   └── 20July_Task_01_SpiceJet_DropDown_ByType.spec.ts
+│   │   ├── 20July_Task_01_SpiceJet_DropDown_ByType.spec.ts
+│   │   ├── 22_July_Task_Hover_Menu_SelectSubMenu.spec.ts
+│   │   └── 24July_Task_FlipKart_Search_Macmini_LOwestPrice.spec.ts
 │   ├── example.spec.ts             # Sample Playwright tests
 │   └── Template.spec.ts            # Test template
 ├── playwright.config.ts            # Playwright configuration
@@ -130,6 +132,7 @@ LearnPlayWrightFundamentals2X/
 | 04 - Session Storage | ✅ Implemented | 247–249 |
 | 05 - Allure Reporting | ✅ Implemented | 248 |
 | 06–23 (advanced topics) | 📋 Reserved | `.gitkeep` only |
+| Live Class Tasks | ✅ Implemented | XPath, Student Login, OrangeHRM, Static/Dynamic Tables, SpiceJet Dropdown, Hover Menu, Flipkart Search & Lowest Price |
 
 ## Configuration (`playwright.config.ts`)
 
