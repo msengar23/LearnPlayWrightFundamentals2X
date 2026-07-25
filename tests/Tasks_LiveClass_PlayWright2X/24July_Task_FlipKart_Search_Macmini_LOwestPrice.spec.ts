@@ -2,16 +2,6 @@ import { test, expect, Locator } from '@playwright/test';
 
 const URL = 'https://www.flipkart.com/search'
 
-// async function finTitleByName(page: Page, name: string): Promise<Locator> {
-//     while (true) {
-//         const title = page.locator('#employees-tbody tr').filter({ hasText:  });
-//         if (await row.count()) return row;
-
-//         const next = page.getByTestId('next-page');
-//         if (await next.isDisabled()) throw new Error(`Row not found: ${name}`);
-//         await next.click();
-//     }
-// }
 
 test.describe('Flipkart Search via the SVG', () => {
 
