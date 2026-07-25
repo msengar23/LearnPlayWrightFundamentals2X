@@ -119,7 +119,7 @@ LearnPlayWrightFundamentals2X/
 │   │   ├── 19July_Task02_DynamicTable.spec.ts
 │   │   ├── 20July_Task_01_SpiceJet_DropDown_ByType.spec.ts
 │   │   ├── 22_July_Task_Hover_Menu_SelectSubMenu.spec.ts
-│   │   └── 24July_Task_FlipKart_Search_Macmini_LowestPrice.spec.ts
+│   │   └── 24July_Task_FlipKart_Search_Macmini_LOwestPrice.spec.ts
 │   ├── example.spec.ts             # Sample Playwright tests
 │   └── Template.spec.ts            # Test template
 ├── playwright.config.ts            # Playwright configuration

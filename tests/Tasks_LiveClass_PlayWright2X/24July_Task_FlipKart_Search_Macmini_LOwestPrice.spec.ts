@@ -2,17 +2,6 @@ import { test, expect, Locator } from '@playwright/test';
 
 const URL = 'https://www.flipkart.com/search'
 
-// async function finTitleByName(page: Page, name: string): Promise<Locator> {
-//     while (true) {
-//         const title = page.locator('#employees-tbody tr').filter({ hasText:  });
-//         if (await row.count()) return row;
-
-//         const next = page.getByTestId('next-page');
-//         if (await next.isDisabled()) throw new Error(`Row not found: ${name}`);
-//         await next.click();
-//     }
-// }
-
 test.describe('Flipkart Search via the SVG', () => {
 
     test.beforeEach(async ({ page }) => {
@@ -51,16 +40,19 @@ test.describe('Flipkart Search via the SVG', () => {
             cheapest = numericPrice;
             cheapestText = price;
         }
+
+        
+
     }
 
-    console.log(`Cheapest Mac mini: ${cheapestText} (₹${cheapest.toLocaleString('en-IN')})`);
+    const sortedPrices = allPrices
+        .map(price => parseInt(price.replace(/[₹,\s]/g, '')))
+        .sort((a, b) => a - b);  // ascending
 
+     console.log('Sorted prices (ascending):', sortedPrices);
 
-
-
-
-
-
+      // Cheapest is just the first after ascending sort:
+     console.log(`Cheapest: ₹${sortedPrices[0].toLocaleString('en-IN')}`);
 
     });
 
