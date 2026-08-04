@@ -1,0 +1,17 @@
+{
+  "name": "snaplocator-monorepo",
+  "private": true,
+  "version": "0.7.0",
+  "description": "SnapLocator monorepo — Chrome extension + marketing site (snaplocator.com)",
+  "scripts": {
+    "build:extension": "cd extension && npm run build && npm run package",
+    "build:website": "cd website && npm run build",
+    "build": "npm run build:extension && npm run build:website",
+    "dev:website": "cd website && npm run dev",
+    "dev:extension": "cd extension && npm run dev",
+    "install:all": "cd extension && npm install && cd ../website && npm install",
+    "typecheck": "cd extension && npm run typecheck && cd ../website && npm run typecheck"
+  },
+  "license": "MIT",
+  "author": "The Testing Academy"
+}

@@ -1,18 +1,3 @@
-// {
-//   "compilerOptions": {
-//     "target": "ES2022",
-//     "module": "ESNext",
-//     "moduleResolution": "Node",
-//     "lib": ["ES2022"],
-//     "types": ["node"],
-//     "allowJs": true,
-//     "esModuleInterop": true,
-//     "resolveJsonModule": true,
-//     "skipLibCheck": true
-//   },
-//   "include": ["tests/**/*.ts", "utils/**/*.ts", "playwright.config.ts"]
-// }
-
 {
   "compilerOptions": {
     "target": "ES2022",
@@ -23,6 +8,7 @@
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "strict": false,
+    "ignoreDeprecations": "6.0",
     "skipLibCheck": true,
     "resolveJsonModule": true,
     "sourceMap": true,

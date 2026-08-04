@@ -33,8 +33,8 @@ async function saveSession() {
 
     // Wait for login to actually complete before snapshotting storage —
     // otherwise the auth cookie isn't set yet and the saved state is empty.
-    await page.waitForURL(/#\/(dashboard|home)/, { timeout: 15000 });
-    await page.waitForTimeout(3000);
+    await page.waitForURL(/#\/(dashboard|home)/, { timeout: 5000 });
+    //await page.waitForTimeout(1000);
 
     await context.storageState({ path: "./user-session.json" });
     console.log("Session saved to user-session.json ✅");

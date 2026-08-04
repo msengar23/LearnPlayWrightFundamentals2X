@@ -129,10 +129,24 @@ LearnPlayWrightFundamentals2X/
 │   │   ├── 275_File_Upload.spec.ts
 │   │   ├── 276_Multiple_File_Upload.spec.ts
 │   │   └── testdata.txt
-│   ├── 15_File_Download/             # (reserved)
-│   ├── 16_Scroll_toElement/          # (reserved)
-│   ├── 17_Expect_Assertions/         # (reserved)
-│   ├── 18_Test_hooks/                # (reserved)
+│   ├── 15_File_Download/             # File download tests
+│   │   └── 277_File_Download.spec.ts
+│   ├── 16_Scroll_toElement/          # Scroll-to-element tests
+│   │   └── 278_ScrollToView.spec.ts
+│   ├── 17_Expect_Assertions/         # Expect assertions & custom matchers
+│   │   ├── 279_Expect.spec.ts
+│   │   ├── 280_Expect.spec.ts
+│   │   ├── 281_Expect.spec.ts
+│   │   ├── 282_Project.spec.ts
+│   │   └── 283_Expect.cheatsheet.md
+│   ├── 18_Test_hooks/                # Test hooks, groups, describe, priority
+│   │   ├── 284_Test_Hook.spec.ts
+│   │   ├── 285_Chrome_Arg_List.md
+│   │   ├── 286_Test_Hook_Cheatsheet.md
+│   │   ├── 287_Group.spec.ts
+│   │   ├── 288_Before_After.spec.ts
+│   │   ├── 289_TestDescribe.spec.ts
+│   │   └── 290_TestPriority.spec.ts
 │   ├── 19_Data_Driven_Testing/       # (reserved)
 │   ├── 20_Page_Object_Model/         # (reserved)
 │   ├── 21_Fixture/                   # (reserved)
@@ -148,7 +162,13 @@ LearnPlayWrightFundamentals2X/
 │   │   ├── 20July_Task_01_SpiceJet_DropDown_ByType.spec.ts
 │   │   ├── 22_July_Task_Hover_Menu_SelectSubMenu.spec.ts
 │   │   ├── 24July_Task_FlipKart_Search_Macmini_LOwestPrice.spec.ts
-│   │   └── 27July_Task_Map_SVG.spec.ts
+│   │   ├── 27July_Task_Map_SVG.spec.ts
+│   │   ├── File_Download/
+│   │   │   ├── 29July_Task01_QAAuth_Resume_download.spec.ts
+│   │   │   └── Session_store_QAAuth.spec.ts
+│   │   └── File_Upload/
+│   │       ├── 29JulyTask01_Upload_File.spec.ts
+│   │       └── Session_Storage_TestingAcademy.spec.ts
 │   ├── example.spec.ts             # Sample Playwright tests
 │   └── Template.spec.ts            # Test template
 ├── playwright.config.ts            # Playwright configuration
@@ -174,8 +194,12 @@ LearnPlayWrightFundamentals2X/
 | 12 - Handle SVG | ✅ Implemented | 271–273 |
 | 13 - Shadow DOM | ✅ Implemented | 274 |
 | 14 - File Upload | ✅ Implemented | 275, 276 |
-| 15–23 (advanced topics) | 📋 Reserved | |
-| Live Class Tasks | ✅ Implemented | XPath, Student Login, OrangeHRM, Static/Dynamic Tables, SpiceJet Dropdown, Hover Menu, Flipkart Search & Lowest Price, Map SVG |
+| 15 - File Download | ✅ Implemented | 277 |
+| 16 - Scroll to Element | ✅ Implemented | 278 |
+| 17 - Expect Assertions | ✅ Implemented | 279–283 |
+| 18 - Test Hooks | ✅ Implemented | 284–290 |
+| 19–23 (advanced topics) | 📋 Reserved | |
+| Live Class Tasks | ✅ Implemented | XPath, Student Login, OrangeHRM, Static/Dynamic Tables, SpiceJet Dropdown, Hover Menu, Flipkart Search & Lowest Price, Map SVG, File Download (QA Auth), File Upload (TTA)
 
 ## Configuration (`playwright.config.ts`)
 
