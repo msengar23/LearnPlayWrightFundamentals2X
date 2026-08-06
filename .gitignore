@@ -14,7 +14,8 @@ node_modules/
 /allure-results/
 
 # Session / User data
-user-session.json
+*-session.json
+output.json
 
 # Environment files
 .env

@@ -147,7 +147,31 @@ LearnPlayWrightFundamentals2X/
 │   │   ├── 288_Before_After.spec.ts
 │   │   ├── 289_TestDescribe.spec.ts
 │   │   └── 290_TestPriority.spec.ts
-│   ├── 19_Data_Driven_Testing/       # (reserved)
+│   ├── 19_Data_Driven_Testing/       # Data-driven tests (JSON, CSV, YAML, MySQL, XLSX)
+│   │   ├── 291_DDT.spec.ts
+│   │   ├── 292_TestData.json
+│   │   ├── 293_Users.json
+│   │   ├── 294_LoginTest.spec.ts
+│   │   ├── 295_Read_Write_FileSystem.ts
+│   │   ├── 296_DDT_Json_Array.spec.ts
+│   │   ├── 297_DDT_CSV.spec.ts
+│   │   ├── 298_JSON_DDT.spec.ts
+│   │   ├── 299_DDT_YAML.spec.ts
+│   │   ├── 300_DDT_MYSQL.spec.ts
+│   │   ├── 301_DDT_XLSX.spec.ts
+│   │   ├── Util/
+│   │   │   ├── csvReader.ts
+│   │   │   ├── dbReader.ts
+│   │   │   ├── excelReader.ts
+│   │   │   ├── generateExcel.ts
+│   │   │   └── yamlReader.ts
+│   │   └── test-data/
+│   │       ├── login-data.csv
+│   │       ├── login-data.sql
+│   │       ├── login-data.xlsx
+│   │       ├── login-data.yml
+│   │       ├── login.json
+│   │       └── registration-data.json
 │   ├── 20_Page_Object_Model/         # (reserved)
 │   ├── 21_Fixture/                   # (reserved)
 │   ├── 22_Misc_Concepts/             # (reserved)
@@ -198,7 +222,8 @@ LearnPlayWrightFundamentals2X/
 | 16 - Scroll to Element | ✅ Implemented | 278 |
 | 17 - Expect Assertions | ✅ Implemented | 279–283 |
 | 18 - Test Hooks | ✅ Implemented | 284–290 |
-| 19–23 (advanced topics) | 📋 Reserved | |
+| 19 - Data-Driven Testing | ✅ Implemented | 291–301 + Utils (CSV, YAML, Excel, MySQL readers) & test data |
+| 20–23 (advanced topics) | 📋 Reserved | |
 | Live Class Tasks | ✅ Implemented | XPath, Student Login, OrangeHRM, Static/Dynamic Tables, SpiceJet Dropdown, Hover Menu, Flipkart Search & Lowest Price, Map SVG, File Download (QA Auth), File Upload (TTA)
 
 ## Configuration (`playwright.config.ts`)
@@ -214,6 +239,35 @@ LearnPlayWrightFundamentals2X/
 | **Reporters** | `line`, `CustomReporter` (TTA HTML), `allure-playwright` |
 | **Parallel** | Fully parallel |
 | **Retries** | 2 on CI, 0 locally |
+
+## Data-Driven Testing (Module 19)
+
+The `tests/19_Data_Driven_Testing/` module demonstrates reading test data from multiple sources and generating parameterized Playwright tests:
+
+| Source | Spec File | Reader/Util | Test Data File |
+|--------|-----------|-------------|----------------|
+| Inline JSON array | `296_DDT_Json_Array.spec.ts` | — | Inline in-spec array |
+| JSON file | `298_JSON_DDT.spec.ts` | `import` / `require` | `registration-data.json` |
+| Tab-delimited CSV | `297_DDT_CSV.spec.ts` | `Util/csvReader.ts` | `login-data.csv` |
+| YAML | `299_DDT_YAML.spec.ts` | `Util/yamlReader.ts` (js-yaml) | `login-data.yml` |
+| MySQL | `300_DDT_MYSQL.spec.ts` | `Util/dbReader.ts` (mysql2) | `login-data.sql` (seed) |
+| Excel (.xlsx) | `301_DDT_XLSX.spec.ts` | `Util/excelReader.ts` (exceljs) | `login-data.xlsx` |
+
+**Key patterns used:**
+- **Synchronous readers** (CSV, YAML): data loads at test-collection time, so `for...of` generates one `test()` per row, each appearing as a separate test in reports.
+- **Async readers** (MySQL, Excel): data arrives in `beforeAll`, so each row runs as a `test.step` inside a single `test()`. Alternative: dump to JSON in `globalSetup`.
+- All readers share a common `LoginRow` interface (`Util/yamlReader.ts`) with `description`, `username`, `password`, `shouldPass`, and `expectedError` fields.
+
+**Setup for MySQL tests:**
+```bash
+mysql -u root -p < tests/19_Data_Driven_Testing/test-data/login-data.sql
+```
+Then configure `.env` with `MYSQL_HOST`, `MYSQL_PORT`, `MYSQL_USER`, `MYSQL_PASSWORD`, `MYSQL_DATABASE`.
+
+**Regenerate Excel test data:**
+```bash
+node tests/19_Data_Driven_Testing/Util/generateExcel.js
+```
 
 ## Utilities
 
